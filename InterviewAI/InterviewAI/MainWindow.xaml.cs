@@ -59,9 +59,26 @@ namespace InterviewAI
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            //Uri uri = new Uri("/Page1.xaml", UriKind.Relative);
-            //Page1 page = new Page1();
-            //frame1.Content = page;
+            Uri uri = new Uri("/InterviewPage.xaml", UriKind.Relative);
+            InterviewPage page = new InterviewPage();
+            frame1.Content = page;
+            Maingroup.Visibility = Visibility.Hidden;
+        }
+
+        private void rbtn_Checked(object sender, RoutedEventArgs e)
+        {
+            RadioButton checkrbtn = (RadioButton)sender;
+
+            if (checkrbtn.Name == "Select_rbtn")
+            {
+                Quest_cbBox.IsEnabled = true;
+                start_btn.IsEnabled = true;
+            }
+            else
+            {
+                start_btn.IsEnabled = true;
+                Quest_cbBox.IsEnabled= false;
+            }
         }
     }
 }

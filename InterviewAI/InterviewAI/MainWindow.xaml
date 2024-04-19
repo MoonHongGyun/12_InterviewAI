@@ -8,40 +8,44 @@
         Closed="Window_Closed"
         Title="MainWindow" Height="720" Width="1080">
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="50"/>
-            <RowDefinition Height="50"/>
-            <RowDefinition Height="50"/>
-            <RowDefinition Height="50"/>
-            <RowDefinition Height="50"/>
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="405"/>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
-        <Frame x:Name="frame1" NavigationUIVisibility="Hidden" Grid.RowSpan="4" Grid.ColumnSpan="2"/>
-        <Label Content="이름" Grid.Row="1" Height="30" Width="100" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="15" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
-        <TextBox x:Name="name_ct" Grid.Row="1" Grid.Column="1" Height="30" Width="300" HorizontalAlignment="Left" FontSize="15" VerticalContentAlignment="Center" Margin="25,0,0,0"/>
-        <Label Content="직업" Grid.Row="2" Height="30" Width="100" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="15" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
-        <ComboBox x:Name="job_cbBox" Grid.Row="2" Grid.Column="1" Height="30" Width="300" HorizontalAlignment="Left" Margin="25,0,0,0" FontSize="15">
-
-        </ComboBox>
-        <Label Content="진행" Grid.Row="3" Height="30" Width="100" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="15" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
-        <GroupBox Grid.Row="3" Grid.Column="2" Width="300" HorizontalAlignment="Left" Margin="25,0,0,0">
-            <Grid Height="50">
+        <Frame x:Name="frame1" NavigationUIVisibility="Hidden"/>
+        <GroupBox x:Name="Maingroup" BorderThickness="0" Visibility="Visible">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="405"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <RadioButton Content="선택" HorizontalAlignment="Center" FontSize="15" Grid.Column="1" VerticalAlignment="Center"/>
-                <RadioButton Content="랜덤" HorizontalAlignment="Center" FontSize="15" VerticalAlignment="Center"/>
+                <Label Content="이름" Grid.Row="1" Height="30" Width="100" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="15" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+                <TextBox x:Name="name_ct" Grid.Row="1" Grid.Column="1" Height="30" Width="300" HorizontalAlignment="Left" FontSize="15" VerticalContentAlignment="Center" Margin="25,0,0,0"/>
+                <Label Content="직업" Grid.Row="2" Height="30" Width="100" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="15" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+                <ComboBox x:Name="job_cbBox" Grid.Row="2" Grid.Column="1" Height="30" Width="300" HorizontalAlignment="Left" Margin="25,0,0,0" FontSize="15">
+
+                </ComboBox>
+                <Label Content="진행" Grid.Row="3" Height="30" Width="100" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="15" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+                <GroupBox Grid.Row="3" Grid.Column="2" Width="300" HorizontalAlignment="Left" Margin="25,0,0,0" BorderThickness="0">
+                    <Grid Height="50">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <RadioButton x:Name="Select_rbtn" Content="선택" HorizontalAlignment="Center" FontSize="15" Grid.Column="1" VerticalAlignment="Center" Checked="rbtn_Checked"/>
+                        <RadioButton x:Name="Random_rbtn" Content="랜덤" HorizontalAlignment="Center" FontSize="15" VerticalAlignment="Center" Checked="rbtn_Checked"/>
+                    </Grid>
+                </GroupBox>
+                <Label Content="질문" Grid.Row="4" Height="30" Width="100" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="15" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+                <ComboBox x:Name="Quest_cbBox" Grid.Row="4" Grid.Column="1" Height="30" Width="300" HorizontalAlignment="Left" Margin="25,0,0,0" FontSize="15" IsEnabled="False">
+
+                </ComboBox>
+                <Button x:Name="start_btn" Content="시작" FontSize="15" Grid.Row="5" Grid.ColumnSpan="2" Height="30" Width="400" Click="Button_Click" IsEnabled="False"/>
             </Grid>
         </GroupBox>
-        <Label Content="질문" Grid.Row="4" Height="30" Width="100" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="15" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
-        <ComboBox x:Name="Quest_cbBox" Grid.Row="4" Grid.Column="1" Height="30" Width="300" HorizontalAlignment="Left" Margin="25,0,0,0" FontSize="15">
-
-        </ComboBox>
-        <Button x:Name="start_btn" Content="시작" FontSize="15" Grid.Row="5" Grid.ColumnSpan="2" Height="30" Width="400" Click="Button_Click"/>
     </Grid>
 </Window>

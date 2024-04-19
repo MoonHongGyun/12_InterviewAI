@@ -5,12 +5,71 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:InterviewAI"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="720" d:DesignWidth="1080"
       Title="InterviewPage">
 
     <Grid Background="White">
         <Grid.RowDefinitions>
-            
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="200"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="10"/>
         </Grid.RowDefinitions>
+        <Image x:Name="Img_cam" Grid.RowSpan="3" Margin="10"/>
+        <Label x:Name="CountdownBack_lb" Margin="420,5" Grid.Row="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
+            <Label.Background>
+                <SolidColorBrush Color="LightGray" Opacity="0.3"/>
+            </Label.Background>
+            <Label.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="25"/>
+                </Style>
+            </Label.Resources>
+        </Label>
+        <Label x:Name="Countdown_lb" Content="3" FontSize="150" FontWeight="Bold" Grid.Row="1" HorizontalAlignment="Center"/>
+        <GroupBox x:Name="Questgroup" FontSize="30" Grid.Row="2" Margin="15,30" BorderThickness="0" Visibility="Hidden">
+            <GroupBox.Header>
+                <Border Background="Black">
+                    <Label Content="질문" FontWeight="Bold">
+                        <Label.Foreground>
+                            <SolidColorBrush Color="White"/>
+                        </Label.Foreground>
+                    </Label>
+                </Border>
+            </GroupBox.Header>
+            <GroupBox.Background>
+                <SolidColorBrush Color="Transparent"/>
+            </GroupBox.Background>
+            <GroupBox.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </GroupBox.Resources>
+            <Label x:Name="Quest_lb" Content="자기소개를 1분동안 얘기해주세요." Grid.Row="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" FontSize="30">
+                <Label.Background>
+                    <SolidColorBrush Color="LightGray" Opacity="0.3"/>
+                </Label.Background>
+                <Label.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="10"/>
+                    </Style>
+                </Label.Resources>
+            </Label>
+        </GroupBox>
+        <Button x:Name="Record_btn" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Row="3" Height="50" Width="50" Click="Button_Click" FontSize="30">
+            <Button.Content>
+                <Rectangle Height="30" Width="30" RadiusX="25" RadiusY="25">
+                    <Rectangle.Fill>
+                        <SolidColorBrush Color="Red"/>
+                    </Rectangle.Fill>
+                </Rectangle>
+            </Button.Content>
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="25"/>
+                </Style>
+            </Button.Resources>
+        </Button>
     </Grid>
 </Page>
