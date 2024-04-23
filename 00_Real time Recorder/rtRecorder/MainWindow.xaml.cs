@@ -115,8 +115,8 @@ namespace rtRecorder
 
         private void Btn_Record_Click(object sender, RoutedEventArgs e)
         {
-            string videoname = DateTime.Now.ToString("yyyy-MM-dd-hh시mm분ss초"); // 면접 영상 파일명(현재시간/~06시~)
-            intervideo = new VideoWriter("../../../" + videoname + ".mp4", FourCC.DIVX, 30, cam_mat.Size()); // 영상 저장 이름(경로), 코덱, 프레임, 크기 설정 | VideoWriter(이름, 코덱, 프레임수, 프레임 크기)
+            string videoname = DateTime.Now.ToString("yyyy-MM-dd-hh시mm분ss초"); // 면접 영상 파일명(현재 시각/~06시~)
+            intervideo = new VideoWriter("../../../" + videoname + ".mp4", FourCC.DIVX, 30, cam_mat.Size()); // 영상 저장 이름(경로), 코덱, 프레임, 크기 설정 | VideoWriter(이름, 코덱, 프레임 수, 프레임 크기)
             inter_timer.IsEnabled = true; // 타이머 시작
             
         } // private void Btn_Record_Click

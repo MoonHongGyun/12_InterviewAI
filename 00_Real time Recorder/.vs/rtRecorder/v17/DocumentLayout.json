@@ -1,9 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\admin\\Desktop\\\uAE30\uD0C0\\\uBC31\uC5C5\\07_Win_CSharp\\Visual Studio 2022\\01_AI_mock_interview\\00_Real time Recorder\\",
+  "WorkspaceRootPath": "C:\\Users\\admin\\Desktop\\12_InterviewAI\\00_Real time Recorder\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7D814F14-7C3C-4B03-B2D4-7909C42A5F67}|rtRecorder\\rtRecorder.csproj|c:\\users\\admin\\desktop\\\uAE30\uD0C0\\\uBC31\uC5C5\\07_win_csharp\\visual studio 2022\\01_ai_mock_interview\\00_real time recorder\\rtrecorder\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7D814F14-7C3C-4B03-B2D4-7909C42A5F67}|rtRecorder\\rtRecorder.csproj|c:\\users\\admin\\desktop\\12_interviewai\\00_real time recorder\\rtrecorder\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7D814F14-7C3C-4B03-B2D4-7909C42A5F67}|rtRecorder\\rtRecorder.csproj|solutionrelative:rtrecorder\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -44,11 +44,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\\uAE30\uD0C0\\\uBC31\uC5C5\\07_Win_CSharp\\Visual Studio 2022\\01_AI_mock_interview\\00_Real time Recorder\\rtRecorder\\MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\12_InterviewAI\\00_Real time Recorder\\rtRecorder\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "rtRecorder\\MainWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\admin\\Desktop\\\uAE30\uD0C0\\\uBC31\uC5C5\\07_Win_CSharp\\Visual Studio 2022\\01_AI_mock_interview\\00_Real time Recorder\\rtRecorder\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\admin\\Desktop\\12_InterviewAI\\00_Real time Recorder\\rtRecorder\\MainWindow.xaml.cs",
               "RelativeToolTip": "rtRecorder\\MainWindow.xaml.cs",
-              "ViewState": "AQIAAHEAAAAAAAAAAAAswBgAAAAbAAAA",
+              "ViewState": "AQIAAGYAAAAAAAAAAAAowIIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-18T06:56:13.194Z",
               "EditorCaption": ""

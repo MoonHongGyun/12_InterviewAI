@@ -35,7 +35,7 @@ namespace InterviewAI
         DispatcherTimer dtTimer;
         bool bCam, bTimer;
 
-        // 음성 파일 경로 | 부모 디렉토리 반환(현재 경로).부모(상위).부모(상위).경로까지
+        // 음성 파일 경로 | 부모 디렉터리 반환(현재 경로).부모(상위).부모(상위).경로까지
         string saveWavPath = Directory.GetParent(Environment.CurrentDirectory).Parent.Parent.FullName + "\\";
 
         WaveInEvent micIn = new WaveInEvent(); // 음성을 잡는 객체
@@ -114,15 +114,15 @@ namespace InterviewAI
 
         private async void Button_Click(object sender, RoutedEventArgs e)
         {
-            // 음성 파일 기록 경로 | 경로 결합.음성 파일 경로 + 현재시간_rec_voice.wav
+            // 음성 파일 기록 경로 | 경로 결합.음성 파일 경로 + 현재 시각_rec_voice.wav
             string wavFilePath = System.IO.Path.Combine(saveWavPath, DateTime.Now.ToString("yyyy-MM-dd-hh시mm분ss초") + "_voice.wav");
   
-            wavWriter = new WaveFileWriter(wavFilePath, micIn.WaveFormat); // 음성 파일 기록(경로, 이벤트객체.포맷)
+            wavWriter = new WaveFileWriter(wavFilePath, micIn.WaveFormat); // 음성 파일 기록(경로, 이벤트 객체.포맷)
             micIn.StartRecording();
 
             micIn.DataAvailable += (s, voice) =>
             {
-                wavWriter.Write(voice.Buffer, 0, voice.BytesRecorded); // 음성 파일 저장(버퍼, 버퍼 시작, 버퍼 바이트수)
+                wavWriter.Write(voice.Buffer, 0, voice.BytesRecorded); // 음성 파일 저장(버퍼, 버퍼 시작, 버퍼 바이트 수)
                 if (wavWriter.Position > micIn.WaveFormat.AverageBytesPerSecond * 10) // 10초가 지나면
                 {
                     micIn.StopRecording();
